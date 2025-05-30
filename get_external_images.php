@@ -23,6 +23,8 @@ function iip_render_page() {
     <script>
     jQuery(document).ready(function($) {
         var total = 0;
+        
+        var startBtn = $('#iip-start-btn');
 
         function processBatch(offset) {
             $.ajax({
@@ -44,32 +46,38 @@ function iip_render_page() {
                         if (isNaN(processed) || isNaN(total) || total === 0) {
                             console.warn('Invalid data:', processed, total);
                             $('#iip-progress-text').text('Error!');
+                            startBtn.prop('disabled', false);
                             return;
                         }
 
                         var progress = (processed / total) * 100;
                         $('#iip-progress-bar').val(progress);
-                        $('#iip-progress-text').text(processed + ' from ' + total + ' posts processed');
+                        $('#iip-progress-text').text(processed + ' of ' + total + ' posts processed');
 
                         if (processed < total) {
                             processBatch(processed);
                         } else {
                             $('#iip-progress-text').text('Import complete!');
+                            startBtn.prop('disabled', false);
                         }
                     } else {
                         $('#iip-progress-text').text('Error: ' + response.data);
+                        startBtn.prop('disabled', false);
                     }
                 },
                 error: function(xhr, status, error) {
                     console.error('AJAX error:', status, error);
                     $('#iip-progress-text').text('AJAX request error');
+                    startBtn.prop('disabled', false);
                 }
             });
         }
 
-        $('#iip-start-btn').on('click', function() {
+        startBtn.on('click', function() {
+            const $btn = $(this);
+            $btn.prop('disabled', true);
             $('#iip-progress-bar').val(0);
-            $('#iip-progress-text').text('Importing images...');
+            $('#iip-progress-text').text('Importing images, please wait...');
             processBatch(0);
         });
     });
