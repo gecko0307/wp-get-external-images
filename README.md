@@ -22,6 +22,8 @@ Please make a full backup of your database before running the import. There are 
 
 Once complete, all external image URLs found in published posts will be replaced with links to copies in your own Media Library.
 
+It is recommended to deactivate the plugin after the import is complete.
+
 ## Notes
 
 - Only published posts are processed
