@@ -4,9 +4,9 @@
 
 This is especially useful after migrating from another CMS or website, where posts may still reference images hosted on an external domain.
 
-✅ Skips images already hosted locally
-✅ Ignores draft posts
-✅ Includes basic SSRF protection for added safety
+✅ Skips images already hosted locally<br>
+✅ Ignores draft posts<br>
+✅ Includes basic SSRF protection for added safety<br>
 ✅ Tested with WordPress 6.8
 
 ## Before You Start
