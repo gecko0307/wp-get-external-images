@@ -1,13 +1,28 @@
 # Get External Images
 
-A very simple WordPress plugin that imports external images in posts (automatically downloads them to the Media Library and updates URLs in posts). It is useful after migrating from another CMS when images in posts still link to the old site.
+**Get External Images** is a lightweight WordPress plugin that scans published posts for externally hosted images, downloads them to your Media Library, and automatically updates the image URLs in post content.
 
-Images that are already in the library are ignored. Draft posts are ignored.
+This is especially useful after migrating from another CMS or website, where posts may still reference images hosted on an external domain.
 
-Plugin was tested with WordPress 6.8.
+✅ Skips images already hosted locally
+✅ Ignores draft posts
+✅ Includes basic SSRF protection for added safety
+✅ Tested with WordPress 6.8
 
-## Usage
+## Before You Start
 
-Before starting, make a backup of the database. There are plenty of great plugins to do that.
+Please make a full backup of your database before running the import. There are many great backup plugins available in the WordPress plugin ecosystem.
 
-Go to the "Get External Images" section in the admin panel, then press the "Start import" button. The progressbar will show a number of posts processed.
+## How to Use
+
+- Install and activate the plugin
+- Go to **Get External Images** in the WordPress admin panel
+- Click the "Start import" button
+- Watch the progress bar as your posts are scanned and images are imported.
+
+Once complete, all external image URLs found in published posts will be replaced with links to copies in your own Media Library.
+
+## Notes
+
+- Only published posts are processed
+- The plugin runs in small batches via AJAX for better performance and to avoid timeouts.
