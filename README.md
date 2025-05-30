@@ -4,6 +4,8 @@ A very simple WordPress plugin that imports external images in posts (automatica
 
 Images that are already in the library are ignored. Draft posts are ignored.
 
+Plugin was tested with WordPress 6.8.
+
 ## Usage
 
 Before starting, make a backup of the database. There are plenty of great plugins to do that.
