@@ -47,7 +47,7 @@ function iip_render_page() {
 
                         var progress = (processed / total) * 100;
                         $('#iip-progress-bar').val(progress);
-                        $('#iip-progress-text').text(processed + ' из ' + total + ' обработано');
+                        $('#iip-progress-text').text(processed + ' from ' + total + ' posts processed');
 
                         if (processed < total) {
                             processBatch(processed);

@@ -2,7 +2,7 @@
 
 A very simple WordPress plugin that imports external images in posts (automatically downloads them to the Media Library and updates URLs in posts). It is useful after migrating from another CMS when images in posts still link to the old site.
 
-Images that are already in the library are ignored.
+Images that are already in the library are ignored. Draft posts are ignored.
 
 ## Usage
 
