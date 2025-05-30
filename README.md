@@ -17,7 +17,7 @@ Please make a full backup of your database before running the import. There are 
 
 - Install and activate the plugin
 - Go to **Get External Images** in the WordPress admin panel
-- Click the "Start import" button
+- Click the **Start import** button
 - Watch the progress bar as your posts are scanned and images are imported.
 
 Once complete, all external image URLs found in published posts will be replaced with links to copies in your own Media Library.
